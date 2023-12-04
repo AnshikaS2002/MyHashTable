@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to my hash tables");
 
-        String sentence = "To be or not to be";
+        String sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
         MyHashTable<String, Integer> myHashTable = new MyHashTable<>();
 
