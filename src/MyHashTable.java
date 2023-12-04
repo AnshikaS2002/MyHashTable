@@ -45,6 +45,23 @@ public class MyHashTable<K, V> {
         return keys;
     }
 
+    public void remove(K key) {
+        int index = getHashIndex(key);
+        LinkedList<MyNode<K, V>> linkedList = table[index];
+
+        linkedList.removeIf(node -> areKeysEqual(node.key, key));
+    }
+
+    private boolean areKeysEqual(K key1, K key2) {
+        if (key1 == null && key2 == null) {
+            return true;
+        }
+        if (key1 == null || key2 == null) {
+            return false;
+        }
+        return key1.toString().equalsIgnoreCase(key2.toString());
+    }
+
     private int getHashIndex(K key) {
         int hashCode = key.hashCode();
         return Math.abs(hashCode) % TABLE_SIZE;

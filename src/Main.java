@@ -21,5 +21,13 @@ public class Main {
         for (String word : myHashTable.keys()) {
             System.out.println(word + ": " + myHashTable.get(word));
         }
+
+        myHashTable.remove("avoidable");
+
+        System.out.println("Word Frequencies after removal:");
+        for (String word : myHashTable.keys()) {
+            System.out.println(word + ": " + myHashTable.get(word));
+        }
+
     }
 }
